@@ -4,43 +4,22 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Importa tus componentes como ya lo hacías
-import LastArticles from './components/LastArticles.vue';
-import MiComponente from './components/MiComponente.vue';
-import HelloWorld from './components/HelloWorld.vue';
-import Blog from './components/Blog.vue';
-import Formulario from './components/Formulario.vue';
-//formulario de prueba
-import Formulario_2 from './components/Formulario_2.vue';
-
-import Pagina from './components/Pagina.vue';
 import ErrorComponent from './components/ErrorComponent.vue';
-import Peliculas from './components/Peliculas.vue';
+import PortafolioPage from './components/PortafolioPage.vue';
+import TestTailwind from './components/TestTailwind.vue';
+
 //importa moment para las fechas
 import moment from 'moment';
-import Search from './components/Search.vue';
-import Redirect from './components/Redirect.vue';
-import Article from './components/Article.vue';
-import CreateArticle from './components/CreateArticle.vue';
-import EditArticle from './components/EditArticle.vue';
+
+// 🔑 LÍNEA CLAVE: Importación Global del CSS con Tailwind
+// En src/main.js
+import './assets/css/main.css'
 
 
 // 2. Define tus rutas (esto se mantiene casi igual)
 const routes = [
-    { path: '/home', component: LastArticles },
-    { path: '/blog', component: Blog },
-    { path: '/articulo/:id', name: 'article' ,component: Article },
-    { path: '/editar/:id', name: 'edit' ,component: EditArticle },
-    { path: '/crear-articulo', name: 'create' ,component: CreateArticle },
-    { path: '/formulario', component: Formulario },
-    { path: '/pagina/:id?', name:'pagina', component: Pagina },
-    { path: '/peliculas', name:'peliculas', component: Peliculas },
-    {path: '/buscador/:searchString', component: Search},
-    { path: '/redirect/:searchString', component: Redirect },
-
-    { path: '/ultimos-articulos', component: LastArticles },
-    { path: '/mi-componente', component: MiComponente },
-    { path: '/hola-mundo', component: HelloWorld },
-    { path: '/', component: LastArticles },
+    { path: '/home', component: PortafolioPage },
+    { path: '/', component: PortafolioPage },
     //pagina 404 o pagina de error
     { path: '/:pathMatch(.*)*', name: 'not-found', component: ErrorComponent },
     

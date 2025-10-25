@@ -1,0 +1,8 @@
+
+/* src/style.css o src/main.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* No debe haber NADA más aquí, a menos que sean fuentes o estilos globales */
