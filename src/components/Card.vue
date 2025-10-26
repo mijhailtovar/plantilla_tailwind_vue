@@ -34,7 +34,7 @@
   const getImagePath = (imageName) => {
     // Asumimos que las imágenes están en la carpeta 'public' o 'src/assets/images'
     // Para Vite, esta es una forma común de manejar assets dinámicos:
-    return `/src/assets/${imageName}`; 
+    return `/public${imageName}`; 
     // Nota: Deberás ajustar esta ruta dependiendo de dónde guardes las imágenes.
   };
   </script>
