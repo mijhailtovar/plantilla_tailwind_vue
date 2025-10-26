@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-        <img class="h-32 w-32 flex-shrink-0" v-bind:src="getImagePath(place.imageUrl)" v-bind:alt="place.imageAlt">
+        <img class="h-32 w-32 flex-shrink-0" v-bind:src="place.imageUrl" v-bind:alt="place.imageAlt">
         <div class="px-6 py-4">
             <h3 class="text-lg font-semibold text-gray-800">{{ place.city }}</h3>
             
@@ -30,13 +30,6 @@
       }
   });
   
-  // Función simple para resolver la ruta de la imagen (ajustar según tu estructura)
-  const getImagePath = (imageName) => {
-    // Asumimos que las imágenes están en la carpeta 'public' o 'src/assets/images'
-    // Para Vite, esta es una forma común de manejar assets dinámicos:
-    return `/public${imageName}`; 
-    // Nota: Deberás ajustar esta ruta dependiendo de dónde guardes las imágenes.
-  };
   </script>
   
   <style scoped>
